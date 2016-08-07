@@ -44,7 +44,8 @@
             alert(selectedVal);
             // end debug
 
-            window.open("http://google.com");
+            //window.open(selectedVal);
+            navigator.app.loadUrl("http://google.com", { openExternal: true });
 
         }
 
