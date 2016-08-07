@@ -25,6 +25,28 @@
                 <button onclick="isci()" class="btn btn-default">Prikaži</button>
         </div>
     </section>
+    
+    
+    <section class="container">
+
+        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+
+            <div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
+                <button onclick="dodaj('č')" class="btn btn-default">č</button>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
+                <button onclick="dodaj('š')" class="btn btn-default">š</button>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
+                <button onclick="dodaj('ž')" class="btn btn-default">ž</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
     <footer>
    
         <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -40,6 +62,12 @@
     <script src="css/bootstrap/js/bootstrap.js"></script>
 
     <script>
+
+        function dodaj(letter) {
+            var tempVal = document.getElementById('pojem').value
+            document.getElementById("pojem").value = tempVal + letter;
+        }
+
         function keyPress(event) {
             var x = event.which || event.keyCode;
             if (x == 13) {
@@ -50,6 +78,9 @@
         function isci() {
             var searchTerm = document.getElementById('pojem').value
             var selectedVal = "http://fran.si/iskanje?View=1&Query=" + searchTerm;
+
+            document.getElementById("pojem").placeholder = searchTerm;
+            document.getElementById("pojem").value = "";
 
             window.open(selectedVal);
             
