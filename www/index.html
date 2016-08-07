@@ -29,17 +29,17 @@
     
     <section class="container">
 
-        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 
-            <div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
+            <!--<div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">-->
                 <button onclick="dodaj('č')" class="btn btn-default">č</button>
-            </div>
-            <div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
+            <!--</div>-->
+            <!--<div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">-->
                 <button onclick="dodaj('š')" class="btn btn-default">š</button>
-            </div>
-            <div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
+            <!--</div>-->
+            <!--<div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">-->
                 <button onclick="dodaj('ž')" class="btn btn-default">ž</button>
-            </div>
+            <!--</div>-->
 
         </div>
 
@@ -52,6 +52,7 @@
         <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
                 <p class="navbar-text" style="font-family:Aleo">© Žan Žnidar, 2016</p>
+                <p class="navbar-text navbar-right">Frani 1.1d</p>
             </div>
 
         </nav>
@@ -66,6 +67,7 @@
         function dodaj(letter) {
             var tempVal = document.getElementById('pojem').value
             document.getElementById("pojem").value = tempVal + letter;
+            document.getElementById("pojem").focus();
         }
 
         function keyPress(event) {
