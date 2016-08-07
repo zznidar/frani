@@ -44,7 +44,10 @@
             alert(selectedVal);
             // end debug
 
-            var ref = window.open(selectedVal, '_blank');
+            var ref = window.open('http://apache.org', '_blank', 'location=yes');
+            ref.addEventListener('loadstart', function () { alert(event.url); });
+            //window.open(selectedVal);
+
         }
 
     </script>
