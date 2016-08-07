@@ -28,7 +28,7 @@
         </div>
     </section>
     <footer>
-        <button onclick="cordova.plugins.Keyboard.show();" class="btn btn-default">Tipk</button>
+   
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -36,13 +36,13 @@
 
     <script>
 
-        //SoftKeyboard.show()
-        window.addEventListener('native.keyboardshow', keyboardShowHandler);
 
-        function keyboardShowHandler(e) {
-            alert('Keyboard height is: ' + e.keyboardHeight);
-        }
-        cordova.plugins.Keyboard.show();
+        $(".my-input").on("focus", function(e) {
+            
+            cordova.plugins.Keyboard.show();
+            
+            });
+
 
 
         function keyPress(event) {
@@ -56,13 +56,8 @@
             var searchTerm = document.getElementById('pojem').value
             var selectedVal = "http://fran.si/iskanje?View=1&Query=" + searchTerm;
 
-            // debug
-            //alert(selectedVal);
-            // end debug
-
             window.open(selectedVal);
-            //navigator.app.loadUrl("http://google.com", { openExternal: true });
-
+            
         }
 
     </script>
