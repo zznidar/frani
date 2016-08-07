@@ -18,16 +18,21 @@
     </header>
     <section class="container">
         <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-            <form onsubmit="isci()">
                 <div class="form-group">
                     <label for="ime">Pojem</label>
-                    <input type="text" class="form-control" id="pojem" placeholder="Pojem" autocomplete="off" autofocus="" spellcheck="false" autocorrect="off" autocapitalize="off" />
+                    <input type="text" class="form-control" id="pojem" placeholder="Pojem" autocomplete="off" autofocus="" spellcheck="false" autocorrect="off" autocapitalize="off" onkeypress="keyPress(event)" />
                 </div>
-                <button type="submit" class="btn btn-default">Prikaži</button>
-            </form>
+                <button onclick="isci()" class="btn btn-default">Prikaži</button>
         </div>
     </section>
     <footer>
+   
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="navbar-text" style="font-family:Aleo">© Žan Žnidar, 2016</p>
+            </div>
+
+        </nav>
 
     </footer>
 
@@ -35,16 +40,19 @@
     <script src="css/bootstrap/js/bootstrap.js"></script>
 
     <script>
+        function keyPress(event) {
+            var x = event.which || event.keyCode;
+            if (x == 13) {
+                isci();
+            }
+        }
         
         function isci() {
             var searchTerm = document.getElementById('pojem').value
             var selectedVal = "http://fran.si/iskanje?View=1&Query=" + searchTerm;
 
-            // debug
-            alert(selectedVal);
-            // end debug
-
-            var ref = window.open(selectedVal, '_blank');
+            window.open(selectedVal);
+            
         }
 
     </script>
