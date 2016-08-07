@@ -21,7 +21,7 @@
 	<plugin name="cordova-plugin-whitelist" source="npm" />
 	<access origin="*" />
 
-	<plugin name="cordova-plugin-inappbrowser" source="npm" />
+	<!--<plugin name="cordova-plugin-inappbrowser" source="npm" />-->
   <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
   
 	<!-- Optional splash screen image, e.g.: -->
