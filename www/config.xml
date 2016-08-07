@@ -23,7 +23,7 @@
 
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
   
-  <plugin name="de.phonostar.softkeyboard-custom" source="pgb" />
+  <plugin name="ionic-plugin-keyboard" source="npm" />
   
 	<!-- Optional splash screen image, e.g.: -->
 	<!-- <gap:splash src="splash.png" width="1024" height="768" /> -->
