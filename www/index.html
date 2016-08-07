@@ -35,16 +35,6 @@
     <script src="css/bootstrap/js/bootstrap.js"></script>
 
     <script>
-
-
-        $(".my-input").on("focus", function(e) {
-            
-            cordova.plugins.Keyboard.show();
-            
-            });
-
-
-
         function keyPress(event) {
             var x = event.which || event.keyCode;
             if (x == 13) {

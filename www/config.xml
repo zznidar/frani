@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.frani.app" version="1.2">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.frani.app" version="1.0">
 
 	<name>Frani</name>
 	<description>Hitrejši dostop do portala fran.si!</description>
@@ -22,7 +22,6 @@
 	<access origin="*" />
 
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
-  <plugin name="com.ionic.keyboard" spec="1.0.3" source="pgb" />
   
 	<!-- Optional splash screen image, e.g.: -->
 	<!-- <gap:splash src="splash.png" width="1024" height="768" /> -->
