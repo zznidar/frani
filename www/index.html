@@ -64,6 +64,15 @@
 
     <script>
 
+
+        function foo(){
+            alert("Loaded.");
+            }
+        onload=foo;
+
+
+
+
         function dodaj(letter) {
             var tempVal = document.getElementById('pojem').value
             document.getElementById("pojem").value = tempVal + letter;
