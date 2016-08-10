@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,6 +77,12 @@
         function foo() {
             //alert("Loaded.");
             //document.getElementById("pojem").focus();
+            var test = prompt("Pojem");
+
+            if (test != null) {
+                window.open("http://fran.si/iskanje?View=1&Query=" + test);
+            }
+
         }
         onload = foo;
 
